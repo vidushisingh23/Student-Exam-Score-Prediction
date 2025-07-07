@@ -1,5 +1,6 @@
 # Student Final Grade Predictor App
 
+https://student-exam-score-prediction-vidushi.streamlit.app
 An interactive machine learning web application built using **Streamlit** that predicts student final exam scores (G3) based on academic indicators such as G1, G2, study time, and absences. The app includes prediction,data visualizations, and an embedded Power BI dashboard for additional insight.
 
 ---
