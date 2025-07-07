@@ -1,32 +1,33 @@
-#  Student Final Grade Predictor App
+# Student Final Grade Predictor App
 
-An interactive machine learning web app using **Streamlit** that predicts student final grades (G3) based on academic indicators like G1, G2, study time, and absences. Includes data visualizations, model performance metrics, and a Power BI dashboard snapshot for deeper insights.
-
----
-
-##  Features
-
-- **Predict G3 score** using academic data
-- **EDA and Visualizations** (correlation heatmap, trends)
-- **Embedded Power BI dashboard** (Math dataset)
-- **Streamlit web app** with dark theme UI
+An interactive machine learning web application built using **Streamlit** that predicts student final exam scores (G3) based on academic indicators such as G1, G2, study time, and absences. The app includes prediction,data visualizations, and an embedded Power BI dashboard for additional insight.
 
 ---
 
-## How to Run the App
+## Features
 
-###  1. Clone the repository
+- Predict final exam grade (G3) using key academic features
+- Exploratory data analysis and visualizations
+- Model evaluation metrics (R² Score, MAE, RMSE)-done in EDA_and_modeling file while training
+- Power BI dashboard summary for the Math dataset
+- Deployed on Streamlit Cloud: [Visit App](https://student-exam-score-prediction-vidushi.streamlit.app/)
+
+---
+
+## How to Run the App Locally
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/student-score-predictor.git
 cd student-score-predictor
 ```
 
-### 2. Set up virtual environment
+### 2. Set up a virtual environment
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+source .venv/bin/activate  # For Windows: .venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
@@ -35,27 +36,26 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### ▶4. Run the app
+### 4. Run the application
 
 ```bash
-streamlit run app/streamlit_app.py
+streamlit run streamlit_app.py
 ```
 
 ---
 
-##  Project Structure
+## Project Structure
 
 ```
 student-score-predictor/
 │
-├── app
-   ├── streamlit_app.py              # Main Streamlit app
-├── requirements.txt              # Python dependencies
+├── EDA_and_Modeling.py           # Script for analysis and model training 
+├── requirements.txt              # Python dependency list
 │
 ├── model/
-│   ├── regressor.pkl             # Trained Random Forest model
-│   ├── scaler.pkl                # StandardScaler for input features
-│   └── metrics.pkl               # Model performance metrics (R², MAE, RMSE)
+│   ├── regressor.pkl             # Trained regression model
+│   ├── scaler.pkl                # Scaler used for normalization
+│   └── metrics.pkl               # Stored evaluation metrics
 │
 ├── data/
 │   ├── math_dataset.csv          # Math subject dataset
@@ -66,36 +66,19 @@ student-score-predictor/
 │       ├── absences_vs_g3.png
 │       ├── actual_vs_pred.png
 │       ├── eda_heatmap.png
-│       └── powerbi_dashboard.png  # Power BI snapshot image
+│       └── powerbi_dashboard.png
 │
-└── EDA_and_Modeling.py    # Script for preprocessing, training, and saving models/plots
-        
+└── apps/
+    └── streamlit_app.py         # Main Streamlit interface
 ```
 
----
 
-## Power BI Dashboard
-
-![Power BI](data/plots/powerbi_dashboard.png)
-
-- The Power BI dashboard is created using the Math dataset.
-- Due to Streamlit and Power BI Desktop limitations, a static image is displayed in the app.
-- Interactive version available only in Power BI Desktop (free version doesn't support web embedding).
-
----
-
-##  Future Improvements
-
-- Deploy on Streamlit Cloud
-- Add subject-specific model selection
-- Add feature to compare different ML models visually
-- Enable live Power BI embedding (if using Power BI Pro or publish to web)
 
 ---
 
 ## Author
 
-- **Vidushi Singh**
-- Minor Project CS3270: *"Student Exam Score Prediction"*
+**Vidushi Singh**  
+– Student Exam Score Prediction
 
 ---
