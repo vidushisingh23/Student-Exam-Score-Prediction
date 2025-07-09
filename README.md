@@ -20,7 +20,7 @@ An interactive machine learning web application built using **Streamlit** that p
 ### 1. Clone the repository
 
 ```bash
-git clone[ https://github.com/yourusername/student-score-predictor.git](https://github.com/vidushisingh23/Student-Exam-Score-Prediction)
+git clone (https://github.com/vidushisingh23/Student-Exam-Score-Prediction)
 cd student-exam-score-predictor
 ```
 
